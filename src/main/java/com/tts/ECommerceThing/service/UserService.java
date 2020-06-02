@@ -1,5 +1,6 @@
 package com.tts.ECommerceThing.service;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +39,7 @@ import com.tts.ECommerceThing.repository.UserRepository;
               return findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
           }
  
-          public void updateCart(Map<Product, Integer> cart) {
+          public void updateCart(HashMap<Product, Integer> cart) {
               User user = getLoggedInUser();
               user.setCart(cart);
               saveExisting(user);
