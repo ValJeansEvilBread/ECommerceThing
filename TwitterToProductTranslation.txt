@@ -1,0 +1,6 @@
+message => description
+tweet => product
+tag => role
+tweet_id => product_id
+tag_id => category_id
+tweet_tag => product_category
